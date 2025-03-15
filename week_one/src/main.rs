@@ -10,46 +10,42 @@ fn main() {
      ------------------------------------------------*/
     println!("Hamid Balogun Adeshina"); // Full Name
     println!("PSC2307139"); // Matric Number
-    let fav_emoji: char = '🦀'; // Favourite Emoji
-    println!("{}", fav_emoji);
+    println!("{}", '\u{1F494}'); // Favourite Emoji
     let num_1 : f32 = 22.0;
     let num_2 : f32 = 7.0;
     println!("{}", num_1/num_2); // Divide two numbers to give a float
-    print_name(); // Full Name function
-    print_mat_num(); // Matric Number function
-    print_fav_emoji(); // Favourite Emoji function
-    divide_two_floats(); // Divide two numbers function
+    println!("{}",name("Hamid Balogun Adeshina")); // Full Name function
+    println!("{}",mat_num("PSC2307139")); // Matric Number function
+    println!("{}",fav_emoji('\u{1F494}')); // Favourite Emoji function
+    println!("{}",divide_two_floats(22.0, 7.0)); // Divide two numbers function
 }
 
-fn print_name() {
+fn name(name: &str) -> &str{
     /*
-     * This function prints my Full Name
+     * This function returns inputted Name
      */
-    println!("Hamid Balogun Adeshina");
+    name
 }
 
-fn print_mat_num() {
+fn mat_num(mat_num: &str) -> &str{
     /*
      * This function prints my Matric Number
      */
-    println!("PSC2307139");
+    mat_num
 }
 
-fn print_fav_emoji() {
+fn fav_emoji(emoji: char) -> char{
     /*
-     * This function prints my Favourite Emoji
+     * This function returns the inputted Emoji
      */
-    let fav_emoji: char = '🦀';
-    println!("{}", fav_emoji);
+    emoji
 }
 
-fn divide_two_floats() {
+fn divide_two_floats(num_1: f32, num_2: f32) -> f32{
     /*
      * This function:
      * - divides two floats
-     * - and then prints the results
+     * - and then returns the results
      */
-    let num_1 : f32 = 22.0;
-    let num_2 : f32 = 7.0;
-    println!("{}", num_1/num_2); 
+    num_1 / num_2
 }
