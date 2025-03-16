@@ -8,7 +8,7 @@ The checker script just makes it easier to check the assignment
 Clone the repo and run the following command
 
 
-`code./checker.sh ./week_one`
+`./checker.sh ./week_one`
 
 
 Assignment of week is used in the example above but as assignment the checker can check them too
