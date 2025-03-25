@@ -73,7 +73,7 @@ fn highest_score(list_of_students: &Vec<Student>) -> (&str, u32) {
 // fn failures(list_of_students: &[Student]) -> u32 {
 //     let mut failed: u32 = 0;
 //     for student in list_of_students.iter() {
-//         if student.score >= 50 {
+//         if student.score <= 50 {
 //             failed += 1;
 //         }
 //     }
