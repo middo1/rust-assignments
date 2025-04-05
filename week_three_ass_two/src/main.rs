@@ -58,19 +58,30 @@ fn create_students(list_of_student_name:Vec<String>, list_of_student_score:Vec<f
     return list_of_student;
 }
 fn process_grade(score: f64) -> String{
-    if score > 100.0 {
-        "Too much".to_string()
-    } else if score >= 70.0 {
-        "A".to_string()
-    } else if score < 70.0 && score >= 60.0 {
-        "B".to_string()
-    } else if score < 60.0 && score >= 55.0  {
-        "C".to_string()
-    } else if score < 55.0 && score >= 45.0 {
-        "D".to_string()
-    } else if score < 45.0 && score >= 40.0 {
-        "E".to_string()
-    } else {
-        "F".to_string()
-    }
+    // if score > 100.0 {
+    //     "Too much".to_string()
+    // } else if score >= 70.0 {
+    //     "A".to_string()
+    // } else if score < 70.0 && score >= 60.0 {
+    //     "B".to_string()
+    // } else if score < 60.0 && score >= 55.0  {
+    //     "C".to_string()
+    // } else if score < 55.0 && score >= 45.0 {
+    //     "D".to_string()
+    // } else if score < 45.0 && score >= 40.0 {
+    //     "E".to_string()
+    // } else {
+    //     "F".to_string()
+    // }
+    let grade:String = match  score {
+        score if score > 100.0 => "Too much".to_string(),
+        score if score >= 70.0 => "A".to_string(),
+        score if score < 70.0 && score >= 60.0  => "B".to_string(),
+        score if score < 60.0 && score >= 55.0  => "C".to_string(),
+        score if score < 55.0 && score >= 45.0   => "D".to_string(),
+        score if score < 45.0 && score >= 40.0  => "E".to_string(),
+        score if score < 39.0  => "F".to_string(),
+        _ => "NaN".to_string(),
+    };
+    return grade;
 }
